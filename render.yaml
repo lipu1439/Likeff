@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: likeff
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    plan: free
+    envVars:
+      - key: BOT_TOKEN
+        value: YOUR_BOT_TOKEN
+      - key: MONGO_URI
+        value: YOUR_MONGODB_URI
+      - key: SHORTNER_API
+        value: YOUR_SHORTENER_API_KEY
+      - key: FLASK_URL
+        value: https://likebot-flask.onrender.com
+      - key: HOW_TO_VERIFY_URL
+        value: https://your-help-link.com
